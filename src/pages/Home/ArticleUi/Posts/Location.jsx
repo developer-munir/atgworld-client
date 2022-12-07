@@ -4,17 +4,17 @@ import vector from "../../../../assets/Vector.png";
 const Location = () => {
   return (
     <div>
-      <div class="input-group border-bottom">
-        <span class="input-group-text bg-white border-0">
+      <div className="input-group border-bottom">
+        <span className="input-group-text bg-white border-0">
           <CiLocationOn></CiLocationOn>
         </span>
         <input
           type="text"
           aria-label="First name"
-          class="form-control border-0"
+          className="form-control border-0"
           placeholder="type location"
         />
-        <span class="input-group-text bg-white border-0">
+        <span className="input-group-text bg-white border-0">
           <CiEdit></CiEdit>
         </span>
       </div>
