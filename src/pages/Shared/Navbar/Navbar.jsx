@@ -7,7 +7,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid navbar-sizing">
-          <p className="navbar-brand fs-3 brand-container py-4 ">
+          <p className="navbar-brand fs-3 brand-container py-4 d-none d-lg-block">
             <span className="brand">ATG</span>
             <span>W</span>
             <span>
@@ -47,32 +47,12 @@ const Navbar = () => {
               <span className="dropdown">
                 <span
                   className=" dropdown-toggle account-text-color-blue"
-                  id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  data-bs-toggle="modal"
+                  href="#exampleModalToggle"
+                  role="button"
                 >
                   It's free!
                 </span>
-                <ul
-                  className="dropdown-menu p-8"
-                  aria-labelledby="dropdownMenuButton1"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
               </span>
             </span>
           </div>
