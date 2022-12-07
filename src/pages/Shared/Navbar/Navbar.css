@@ -1,0 +1,24 @@
+.brand {
+  color: #27a365;
+}
+.brand-container {
+  color: #5c5d5d;
+}
+.navbar-sizing {
+  padding-left: 96px;
+  padding-right: 96px;
+}
+.form-style {
+  width: 360px;
+  height: 42px;
+  border-radius: 21px;
+}
+.form-bg {
+  background-color: #f2f2f2;
+}
+.account-text-color-blue {
+  color: #2f6ce5;
+}
+.account-text-color-black {
+  color: #2e2e2e;
+}
