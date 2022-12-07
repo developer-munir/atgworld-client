@@ -1,0 +1,11 @@
+.modal-top-title {
+  background: #effff4;
+
+  color: #008a45;
+}
+.close-btn-modal {
+  background-color: #effff4;
+  position: relative;
+  left: 88%;
+  top: 30%;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "../Authentication.css";
 
 const Register = () => {
   return (
@@ -10,19 +11,22 @@ const Register = () => {
         aria-labelledby="exampleModalToggleLabel"
         tabindex="-1"
       >
+        <button
+          type="button"
+          class="btn-close close-btn-modal"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
         <div class=" w-75 mx-auto modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalToggleLabel">
+              <h5
+                class="modal-title modal-top-title"
+                id="exampleModalToggleLabel"
+              >
                 Let's learn, share & inspire each other with our passion for
                 computer engineering. Sign up now 🤘🏼
               </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
             </div>
             <div class="modal-body">
               Show a second modal and hide this one with the button below.
