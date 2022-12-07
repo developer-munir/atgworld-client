@@ -1,14 +1,13 @@
 import React from "react";
-import banner from "../../../assets/Rectangle 2.png";
+import banner from "../../../assets/Rectangle 2.svg";
+import "./Banner.css";
 const Banner = () => {
   return (
-    <div>
-      <img src={banner} className="img-fluid" alt="" />
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque
-        quibusdam nemo saepe enim fugit quo magnam perspiciatis eius aperiam.
-      </p>
+    <div className=" banner">
+      <div className=" text-white">
+        <h1>Computer Engineering</h1>
+        <p>142,765 Computer Engineers follow this</p>
+      </div>
     </div>
   );
 };

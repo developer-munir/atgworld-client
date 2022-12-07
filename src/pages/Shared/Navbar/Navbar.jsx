@@ -43,7 +43,7 @@ const Navbar = () => {
             </ul>
 
             <span className="navbar-end">
-              <span className="account-text-color-black">Create account.</span>
+              <span className="account-text-color-black">Create account. </span>
               <span class="dropdown">
                 <span
                   class=" dropdown-toggle account-text-color-blue"
