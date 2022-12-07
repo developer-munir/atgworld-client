@@ -5,9 +5,15 @@
       rgba(0, 0, 0, 0.6) 100%
     ),
     url("../../../assets/Rectangle\ 2.png");
-  max-width: 100%;
-  background-size: contain;
+  /* max-width: 100%; */
+  background-size: 100% 100%;
+  /* object-fit: cover; */
   background-repeat: no-repeat;
   height: 440px;
   overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .banner {
+    object-fit: cover;
+  }
 }
