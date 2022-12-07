@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./ArticleUi.css";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
+
 const ArticleNavbar = () => {
   return (
     <div>
@@ -48,7 +50,7 @@ const ArticleNavbar = () => {
             <span class="navbar-text d-flex justify-content-center align-items-center">
               <div class="dropdown ">
                 <button
-                  class=" dropdown-toggle post-container border-0"
+                  class=" dropdown-toggle post-container border-0 "
                   id="dropdownMenuButton1"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -73,7 +75,10 @@ const ArticleNavbar = () => {
                   </li>
                 </ul>
               </div>
-              <button className="ms-4 button">button</button>
+              <button className="ms-4 button text-white">
+                <AiOutlineUsergroupAdd></AiOutlineUsergroupAdd>
+                <span className=" group-btn">Join Group</span>
+              </button>
             </span>
           </div>
         </div>

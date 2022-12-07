@@ -9,3 +9,7 @@
   border-radius: 4px;
   border: none;
 }
+.group-btn {
+  font-size: small;
+  margin-left: 5px;
+}
