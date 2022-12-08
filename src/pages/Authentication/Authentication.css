@@ -46,10 +46,14 @@
   background-color: white;
   font-weight: 600;
   color: #2f6ce5;
+  cursor: pointer;
 }
 .privacy-text {
   font-size: 11px;
-  margin-top: 44%;
+  margin-top: 18%;
+}
+.go-create-account {
+  font-size: 13px;
 }
 @media screen and (min-width: 576px) {
   .modal-dialog {

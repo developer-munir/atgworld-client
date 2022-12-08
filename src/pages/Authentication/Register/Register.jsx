@@ -2,6 +2,7 @@ import React from "react";
 import "../Authentication.css";
 import RegisterField from "./RegisterField";
 import registerBanner from "../../../assets/513049 PI8X2J 876.png";
+import Login from "../Login/Login";
 const Register = () => {
   return (
     <div>
@@ -65,7 +66,7 @@ const Register = () => {
                     </button>
                   </p>
                   <div>
-                    <img src={registerBanner} alt="" />
+                    <img src={registerBanner} alt="" className="w-100 mt-4" />
                     <p className="privacy-text">
                       By signing up, you agree to our Terms & conditions,
                       Privacy policy
@@ -124,18 +125,24 @@ const Register = () => {
                       aria-label="Close"
                     ></button>
                   </div>
-                  <RegisterField></RegisterField>
+                  <Login></Login>
                 </div>
                 <div className="col-6 d-none d-lg-block">
-                  <p className=" mb-3">
-                    Don’t have an account yet? Create new for free!
-                  </p>
-                  <div>
-                    <img src={registerBanner} alt="" />
-                    <p className="privacy-text">
-                      By signing up, you agree to our Terms & conditions,
-                      Privacy policy
-                    </p>
+                  <div className="go-create-account ">
+                    <span className="mb-3 text-end">
+                      Don’t have an account yet?
+                    </span>
+                    <span
+                      className="singnInBtn"
+                      data-bs-target="#exampleModal"
+                      data-bs-toggle="modal"
+                      data-bs-dismiss="modal"
+                    >
+                      Create new for free!
+                    </span>
+                  </div>
+                  <div className="mt-4">
+                    <img src={registerBanner} alt="" className="w-100" />
                   </div>
                 </div>
               </div>
