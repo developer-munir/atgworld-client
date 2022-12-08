@@ -22,7 +22,7 @@ const Register = () => {
         ></button>
         <div class="modal-dialog  modal-dialog-centered">
           <div class="modal-content modal-sizing">
-            <div class="modal-header  border-0">
+            <div class="modal-header d-none d-md-block  border-0">
               <span
                 class="modal-title modal-top-title modal-header"
                 id="exampleModalLabel"
@@ -33,7 +33,7 @@ const Register = () => {
 
               <button
                 type="button"
-                class="btn-close d-lg-none"
+                class="btn-close d-md-none"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>

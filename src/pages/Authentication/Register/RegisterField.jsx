@@ -51,14 +51,21 @@ const RegisterField = () => {
           name="confirm-password"
         />
       </div>
-      <button className="my-3 py-2 rounded-pill border-0 create-account-btn">
-        Create Account
-      </button>
+      <div className="row">
+        <div className="col-6 col-md-10 col-lg-12">
+          <button className="my-3 px-4 py-2 rounded-pill border-0 create-account-btn w-100">
+            Create Account
+          </button>
+        </div>
+        <span className="col-6 col-md-2 d-lg-none mt-4 text-end">
+          or, Sign In
+        </span>
+      </div>
       <div class="row my-3 border py-2 mx-1">
         <div className="col-4 text-end">
           <img src={facebook} alt="" />
         </div>
-        <div className="col-8 ">Sign up with Facebook</div>
+        <div className="col-8">Sign up with Facebook</div>
       </div>
       <div class="row mt-3 border py-2 mx-1 d-flex flex-row justify-content-between">
         <div className="col-4 text-end">
@@ -66,6 +73,10 @@ const RegisterField = () => {
         </div>
         <div className="col-8 ">Sign up with Google</div>
       </div>
+      <p className="privacy-text text-center d-md-none">
+        By signing up, you agree to our Terms & <br /> conditions, Privacy
+        policy
+      </p>
     </div>
   );
 };
