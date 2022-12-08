@@ -45,13 +45,16 @@ const Navbar = () => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-              <div className="input-group  flex-nowrap form-style">
-                <span className="btn form-bg border-0 " id="addon-wrapping">
+              <div className="input-group   flex-nowrap form-style">
+                <span
+                  className="btn form-bg border-0 search-bar-icon"
+                  id="addon-wrapping"
+                >
                   <AiOutlineSearch></AiOutlineSearch>
                 </span>
                 <input
                   type="text"
-                  className="form-control border-0 form-bg "
+                  className="form-control border-0 form-bg search-bar"
                   placeholder="Search for your favorite groups in ATG"
                   aria-label="Username"
                   aria-describedby="addon-wrapping"
@@ -59,7 +62,7 @@ const Navbar = () => {
               </div>
             </ul>
             {user?.uid ? (
-              <span className="navbar-end">
+              <span className="navbar-end d-flex align-items-center">
                 <span>
                   <img
                     src={user?.photoURL}
@@ -67,9 +70,25 @@ const Navbar = () => {
                     className="profile rounded-pill"
                   />
                 </span>
-                <span className="account-text-color-black profileName ms-3">
+                <div class="dropdown ms-3">
                   {user?.displayName}
-                </span>
+                  <span
+                    className="account-text-color-black profileName "
+                    class="dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  ></span>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li>
+                      <button class="dropdown-item bg-white ">Logout</button>
+                    </li>
+                  </ul>
+                </div>
               </span>
             ) : (
               <span className="navbar-end">

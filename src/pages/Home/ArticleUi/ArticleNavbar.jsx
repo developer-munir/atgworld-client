@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./ArticleUi.css";
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
-
+import { AuthContext } from "../../../context/AuthContext/AuthProvider";
+import leave from "../../../assets/Vector (1).png";
 const ArticleNavbar = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div>
       <nav className="navbar navbar-expand navbar-light bg-light border-bottom">
@@ -114,10 +116,19 @@ const ArticleNavbar = () => {
                   </li>
                 </ul>
               </div>
-              <button className="ms-4 px-2 button text-white">
-                <AiOutlineUsergroupAdd></AiOutlineUsergroupAdd>
-                <span className=" group-btn ">Join Group</span>
-              </button>
+              <div>
+                {user?.uid ? (
+                  <button className=" btn btn-outline-dark mx-2">
+                    <img src={leave} alt="" />
+                    <span> Leave Group</span>
+                  </button>
+                ) : (
+                  <button className="ms-4 px-2 button text-white">
+                    <AiOutlineUsergroupAdd></AiOutlineUsergroupAdd>
+                    <span className=" group-btn ">Join Group</span>
+                  </button>
+                )}
+              </div>
             </span>
           </div>
         </div>

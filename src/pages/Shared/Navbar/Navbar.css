@@ -25,6 +25,12 @@
 .profileName {
   font-size: 14px;
 }
+.search-bar {
+  border-radius: 20px;
+}
+.search-bar-icon {
+  border-radius: 20px;
+}
 @media screen and (max-width: 991px) {
   .navbar-sizing {
     padding-left: 20px;

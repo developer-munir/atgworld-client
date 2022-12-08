@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CiLocationOn, CiEdit } from "react-icons/ci";
 import vector from "../../../../assets/Vector.png";
+import { AuthContext } from "../../../../context/AuthContext/AuthProvider";
+import crossIcon from "../../../../assets/Vector (2).png";
 const Location = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div>
       <div className="input-group border-bottom">
@@ -14,9 +17,19 @@ const Location = () => {
           className="form-control border-0"
           placeholder="type location"
         />
-        <span className="input-group-text bg-white border-0">
-          <CiEdit></CiEdit>
-        </span>
+        {user?.uid ? (
+          <>
+            <button className="input-group-text bg-white border-0">
+              <img src={crossIcon} alt="" />
+            </button>
+          </>
+        ) : (
+          <>
+            <button className="input-group-text bg-white border-0">
+              <CiEdit></CiEdit>
+            </button>
+          </>
+        )}
       </div>
       <div className="my-4 row">
         <div className="col-1">
