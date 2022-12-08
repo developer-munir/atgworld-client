@@ -2,6 +2,7 @@ import React from "react";
 import navbarBrandIcon from "../../../assets/Union 1.png";
 import { AiOutlineSearch, AiFillHome, AiOutlineLogin } from "react-icons/ai";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
@@ -9,20 +10,27 @@ const Navbar = () => {
         <div className="container-fluid d-md-none navbar-sizing py-2">
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <span className="navbar-end ms-auto">
-              <button className="border-0 bg-white me-4">
-                <AiFillHome size={30}></AiFillHome>
-              </button>
+              <Link to="/home">
+                <button className="border-0 bg-white me-4">
+                  <AiFillHome size={30}></AiFillHome>
+                </button>
+              </Link>
               <button className="border-0 bg-white me-4">
                 <AiOutlineSearch size={30}></AiOutlineSearch>
               </button>
-              <button className="border-0 bg-white ">
+              <button
+                className="border-0 bg-white "
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
                 <AiOutlineLogin size={30}></AiOutlineLogin>
               </button>
             </span>
           </div>
         </div>
       </nav>
-      <nav className="navbar navbar-expand-md d-none d-md-block navbar-light">
+      <nav className="navbar  fixed-top navbar-expand-md d-none d-md-block navbar-light bg-white">
         <div className="container-fluid navbar-sizing">
           <p className="navbar-brand fs-3 brand-container  d-none d-md-block">
             <span className="brand">ATG</span>
