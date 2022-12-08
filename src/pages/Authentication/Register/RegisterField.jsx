@@ -60,7 +60,7 @@ const RegisterField = () => {
         </div>
         <div className="col-8 ">Sign up with Facebook</div>
       </div>
-      <div class="row mt-3 border py-2 mx-1">
+      <div class="row mt-3 border py-2 mx-1 d-flex flex-row justify-content-between">
         <div className="col-4 text-end">
           <img src={google} alt="" />
         </div>
