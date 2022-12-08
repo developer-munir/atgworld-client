@@ -5,7 +5,7 @@ import Posts from "./Posts/Posts";
 const ArticleUi = () => {
   return (
     <div>
-      <div className="my-3">
+      <div className="my-md-3">
         <ArticleNavbar></ArticleNavbar>
       </div>
       <div>

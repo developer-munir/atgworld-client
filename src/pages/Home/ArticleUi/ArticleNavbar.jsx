@@ -6,21 +6,53 @@ import { AiOutlineUsergroupAdd } from "react-icons/ai";
 const ArticleNavbar = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarText">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <nav className="navbar navbar-expand navbar-light bg-light border-bottom">
+        <div className="container-fluid  d-md-none">
+          <div className="collapse navbar-collapse " id="navbarText">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" href="#">
+                  All Posts <span>(25)</span>
+                </Link>
+              </li>
+            </ul>
+            <span className="navbar-text d-flex justify-content-center align-items-center">
+              <div className="dropdown ">
+                <button
+                  className=" dropdown-toggle post-container border-0 "
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Filter: All
+                </button>
+                <ul
+                  className="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton1"
+                >
+                  <li>
+                    <NavLink className="dropdown-item" href="#">
+                      Action
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" href="#">
+                      Another action
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" href="#">
+                      Something else here
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div className="container-fluid d-none d-md-block">
+          <div className="collapse navbar-collapse " id="navbarText">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" href="#">
                   All Posts <span>(25)</span>
