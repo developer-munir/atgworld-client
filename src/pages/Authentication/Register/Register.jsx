@@ -8,7 +8,7 @@ const Register = () => {
     <div>
       {/* register modal */}
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
@@ -16,15 +16,15 @@ const Register = () => {
       >
         <button
           type="button"
-          class="btn-close close-btn-modal d-none d-lg-block"
+          className="btn-close close-btn-modal d-none d-lg-block"
           data-bs-dismiss="modal"
           aria-label="Close"
         ></button>
-        <div class="modal-dialog  modal-dialog-centered">
-          <div class="modal-content modal-sizing">
-            <div class="modal-header d-none d-md-block  border-0">
+        <div className="modal-dialog  modal-dialog-centered">
+          <div className="modal-content modal-sizing">
+            <div className="modal-header d-none d-md-block  border-0">
               <span
-                class="modal-title modal-top-title modal-header"
+                className="modal-title modal-top-title modal-header"
                 id="exampleModalLabel"
               >
                 Let's learn, share & inspire each other with our passion for
@@ -33,20 +33,20 @@ const Register = () => {
 
               <button
                 type="button"
-                class="btn-close d-md-none"
+                className="btn-close d-md-none"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
 
-            <div class="modal-body ">
+            <div className="modal-body ">
               <div className="row p-3">
                 <div className="col-lg-6">
                   <div className="d-flex justify-content-between align-items-center">
                     <h1 className="fw-bold fs-3 mb-3">Create Account</h1>
                     <button
                       type="button"
-                      class="btn-close d-lg-none"
+                      className="btn-close d-lg-none"
                       data-bs-dismiss="modal"
                       aria-label="Close"
                     ></button>
@@ -82,7 +82,7 @@ const Register = () => {
       {/* login modal */}
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModalToggle2"
         aria-hidden="true"
         aria-labelledby="exampleModalToggleLabel2"
@@ -90,15 +90,15 @@ const Register = () => {
       >
         <button
           type="button"
-          class="btn-close close-btn-modal d-none d-lg-block"
+          className="btn-close close-btn-modal d-none d-lg-block"
           data-bs-dismiss="modal"
           aria-label="Close"
         ></button>
-        <div class="modal-dialog  modal-dialog-centered">
-          <div class="modal-content modal-sizing">
-            <div class="modal-header d-none d-lg-block border-0">
+        <div className="modal-dialog  modal-dialog-centered">
+          <div className="modal-content modal-sizing">
+            <div className="modal-header d-none d-lg-block border-0">
               <span
-                class="modal-title modal-top-title modal-header"
+                className="modal-title modal-top-title modal-header"
                 id="exampleModalLabel"
               >
                 Let's learn, share & inspire each other with our passion for
@@ -107,20 +107,20 @@ const Register = () => {
 
               <button
                 type="button"
-                class="btn-close d-lg-none"
+                className="btn-close d-lg-none"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
 
-            <div class="modal-body ">
+            <div className="modal-body ">
               <div className="row p-3">
                 <div className="col-lg-6">
                   <div className="d-flex justify-content-between align-items-center">
                     <h1 className="fw-bold fs-3 mb-3">Sign In </h1>
                     <button
                       type="button"
-                      class="btn-close d-lg-none"
+                      className="btn-close d-lg-none"
                       data-bs-dismiss="modal"
                       aria-label="Close"
                     ></button>

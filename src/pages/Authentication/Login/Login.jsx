@@ -9,21 +9,21 @@ const Login = () => {
       <div className="main-group">
         <input
           type="email"
-          class="form-control py-2 from-style "
+          className="form-control py-2 from-style "
           placeholder="Email"
           aria-label="Server"
           name="email"
         />
-        <div class="input-group">
+        <div className="input-group">
           <input
             type="password"
-            class="form-control py-2 from-style"
+            className="form-control py-2 from-style"
             placeholder="Password"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
             name="password"
           />
-          <span class="eye-btn me-2 mt-2" type="button" id="button-addon2">
+          <span className="eye-btn me-2 mt-2" type="button" id="button-addon2">
             <AiOutlineEye size={20}></AiOutlineEye>
           </span>
         </div>
@@ -44,13 +44,13 @@ const Login = () => {
           or, Create Account
         </span>
       </div>
-      <div class="row my-3 border py-2 mx-1">
+      <div className="row my-3 border py-2 mx-1">
         <div className="col-4 text-end">
           <img src={facebook} alt="" />
         </div>
         <div className="col-8 ">Sign up with Facebook</div>
       </div>
-      <div class="row mt-3 border py-2 mx-1 d-flex flex-row justify-content-between">
+      <div className="row mt-3 border py-2 mx-1 d-flex flex-row justify-content-between">
         <div className="col-4 text-end">
           <img src={google} alt="" />
         </div>

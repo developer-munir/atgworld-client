@@ -70,22 +70,24 @@ const Navbar = () => {
                     className="profile rounded-pill"
                   />
                 </span>
-                <div class="dropdown ms-3">
+                <div className="dropdown ms-3">
                   {user?.displayName}
                   <span
                     className="account-text-color-black profileName "
-                    class="dropdown-toggle"
+                    className="dropdown-toggle"
                     type="button"
                     id="dropdownMenuButton1"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   ></span>
                   <ul
-                    class="dropdown-menu"
+                    className="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <button class="dropdown-item bg-white ">Logout</button>
+                      <button className="dropdown-item bg-white ">
+                        Logout
+                      </button>
                     </li>
                   </ul>
                 </div>

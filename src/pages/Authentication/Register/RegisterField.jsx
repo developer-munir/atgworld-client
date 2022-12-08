@@ -20,17 +20,17 @@ const RegisterField = () => {
   return (
     <div>
       <div className="main-group">
-        <div class="input-group ">
+        <div className="input-group ">
           <input
             type="text"
-            class="form-control py-2 name"
+            className="form-control py-2 name"
             placeholder="First Name"
             aria-label="Username"
             name="first-name"
           />
           <input
             type="text"
-            class="form-control py-2 name-2"
+            className="form-control py-2 name-2"
             placeholder="Last Name"
             aria-label="Server"
             name="second-name"
@@ -38,27 +38,27 @@ const RegisterField = () => {
         </div>
         <input
           type="email"
-          class="form-control py-2 from-style "
+          className="form-control py-2 from-style "
           placeholder="Email"
           aria-label="Server"
           name="email"
         />
-        <div class="input-group">
+        <div className="input-group">
           <input
             type="password"
-            class="form-control py-2 from-style"
+            className="form-control py-2 from-style"
             placeholder="Recipient's username"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
             name="password"
           />
-          <span class="eye-btn me-2 mt-2" type="button" id="button-addon2">
+          <span className="eye-btn me-2 mt-2" type="button" id="button-addon2">
             <AiOutlineEye size={20}></AiOutlineEye>
           </span>
         </div>
         <input
           type="password"
-          class="form-control py-2 from-style last-input"
+          className="form-control py-2 from-style last-input"
           placeholder="Confirm Password"
           aria-label="Server"
           name="confirm-password"
@@ -79,14 +79,14 @@ const RegisterField = () => {
           or, Sign In
         </span>
       </div>
-      <div class="row my-3 border py-2 mx-1">
+      <div className="row my-3 border py-2 mx-1">
         <div className="col-4 text-end">
           <img src={facebook} alt="" />
         </div>
         <div className="col-8">Sign up with Facebook</div>
       </div>
       <div
-        class="row mt-3 border py-2 mx-1 d-flex flex-row justify-content-between"
+        className="row mt-3 border py-2 mx-1 d-flex flex-row justify-content-between"
         onClick={handleGoogleLogin}
       >
         <div className="col-4 text-end">

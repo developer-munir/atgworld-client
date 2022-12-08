@@ -24,3 +24,18 @@
 .re-commended {
   font-size: 14px;
 }
+.see-more {
+  color: #2f6ce5;
+  font-size: 12px;
+}
+.follow {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  text-align: center;
+
+  color: #000000;
+}

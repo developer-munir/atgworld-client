@@ -63,8 +63,10 @@ const Location = () => {
             />
             <span className="ms-2">MHJ</span>
           </div>
-          <div className="col-4 ">
-            <button className="px-2 bg-light btn rounded-pill">Follow</button>
+          <div className="col-4 text-end">
+            <button className="px-2 follow border-0 rounded-pill">
+              Follow
+            </button>
           </div>
         </div>
         <div className="my-4 row">
@@ -76,9 +78,16 @@ const Location = () => {
             />
             <span className="ms-2">MBA</span>
           </div>
-          <div className="col-4 ">
-            <button className="px-2 bg-light btn rounded-pill">Follow</button>
+          <div className="col-4 text-end">
+            <button className="px-2 follow border-0 rounded-pill">
+              Follow
+            </button>
           </div>
+        </div>
+        <div className="row my-4 ">
+          <span className="col-12 text-end">
+            <button className="border-0 bg-white see-more ">See More...</button>
+          </span>
         </div>
       </div>
     </div>
