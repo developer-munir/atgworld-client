@@ -1,15 +1,17 @@
 import React from "react";
-import banner from "../../../assets/Rectangle 2.svg";
 import "./Banner.css";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 const Banner = () => {
   return (
-    <div className=" ">
+    <div>
       <div class="banner_img position-relative">
         <div class="icon_box  text-white position-absolute w-100 px-2">
           <div class="d-flex justify-content-between ">
-            <span>arrow</span>
-            <button type="button" class="btn btn-primary">
-              Primary
+            <span>
+              <AiOutlineArrowLeft></AiOutlineArrowLeft>
+            </span>
+            <button type="button" class="btn btn-outline-light">
+              Join Group
             </button>
           </div>
         </div>

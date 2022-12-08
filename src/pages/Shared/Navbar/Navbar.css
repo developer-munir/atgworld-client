@@ -22,3 +22,9 @@
 .account-text-color-black {
   color: #2e2e2e;
 }
+
+@media screen and (max-width: 991px) {
+  .form-style {
+    width: 200px;
+  }
+}
