@@ -40,7 +40,15 @@ const Register = () => {
             <div class="modal-body ">
               <div className="row">
                 <div className="col-lg-6">
-                  <h1 className="fw-bold fs-3 mb-3">Create Account</h1>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h1 className="fw-bold fs-3 mb-3">Create Account</h1>
+                    <button
+                      type="button"
+                      class="btn-close "
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
                   <RegisterField></RegisterField>
                 </div>
                 <div className="col-6 d-none d-lg-block">

@@ -57,3 +57,11 @@
     margin: 1.75rem auto;
   }
 }
+@media screen and (max-width: 576px) {
+  .modal-dialog {
+    max-width: 100%;
+  }
+  .modal-header {
+    display: none;
+  }
+}

@@ -78,9 +78,9 @@ const ArticleNavbar = () => {
                   </li>
                 </ul>
               </div>
-              <button className="ms-4 button text-white">
+              <button className="ms-4 px-2 button text-white">
                 <AiOutlineUsergroupAdd></AiOutlineUsergroupAdd>
-                <span className=" group-btn">Join Group</span>
+                <span className=" group-btn ">Join Group</span>
               </button>
             </span>
           </div>
