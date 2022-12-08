@@ -57,7 +57,12 @@ const RegisterField = () => {
             Create Account
           </button>
         </div>
-        <span className="col-6 col-md-2 d-lg-none mt-4 text-end">
+        <span
+          className="col-6 col-md-2 d-lg-none mt-4 text-end singnInBtn"
+          data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal"
+          data-bs-dismiss="modal"
+        >
           or, Sign In
         </span>
       </div>

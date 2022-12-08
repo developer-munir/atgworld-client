@@ -96,7 +96,7 @@ const Register = () => {
         ></button>
         <div class="modal-dialog  modal-dialog-centered">
           <div class="modal-content modal-sizing">
-            <div class="modal-header  border-0">
+            <div class="modal-header d-none d-lg-block border-0">
               <span
                 class="modal-title modal-top-title modal-header"
                 id="exampleModalLabel"

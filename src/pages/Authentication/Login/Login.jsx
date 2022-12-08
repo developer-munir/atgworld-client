@@ -28,9 +28,22 @@ const Login = () => {
           </span>
         </div>
       </div>
-      <button className="my-3 py-2 rounded-pill border-0 create-account-btn">
-        Create Account
-      </button>
+
+      <div className="row">
+        <div className="col-6 col-md-8 col-lg-12">
+          <button className="my-3 px-4 py-2 rounded-pill border-0 create-account-btn w-100">
+            Sign In
+          </button>
+        </div>
+        <span
+          className="col-6 col-md-4 d-lg-none mt-4 singnInBtn text-end"
+          data-bs-target="#exampleModal"
+          data-bs-toggle="modal"
+          data-bs-dismiss="modal"
+        >
+          or, Create Account
+        </span>
+      </div>
       <div class="row my-3 border py-2 mx-1">
         <div className="col-4 text-end">
           <img src={facebook} alt="" />
