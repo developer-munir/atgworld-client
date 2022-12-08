@@ -55,11 +55,13 @@
   .modal-dialog {
     max-width: 736px;
     margin: 1.75rem auto;
+    border-radius: 8px;
   }
 }
 @media screen and (max-width: 576px) {
   .modal-dialog {
     max-width: 100%;
+    border-radius: 8px;
   }
   .modal-header {
     display: none;
