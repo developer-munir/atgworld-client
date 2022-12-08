@@ -47,9 +47,9 @@ const Navbar = () => {
               <span className="dropdown">
                 <span
                   className=" dropdown-toggle account-text-color-blue"
+                  type="button"
                   data-bs-toggle="modal"
-                  href="#exampleModalToggle"
-                  role="button"
+                  data-bs-target="#exampleModal"
                 >
                   It's free!
                 </span>

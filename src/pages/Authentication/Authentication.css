@@ -6,6 +6,17 @@
 .close-btn-modal {
   background-color: #effff4;
   position: relative;
-  left: 88%;
-  top: 30%;
+  left: 78%;
+  top: 32%;
+}
+
+.modal-header {
+  font-size: 14px;
+  display: block;
+}
+@media screen and (min-width: 576px) {
+  .modal-dialog {
+    max-width: 736px;
+    margin: 1.75rem auto;
+  }
 }
