@@ -14,6 +14,28 @@
   font-size: 14px;
   display: block;
 }
+.main-group {
+  border: 1px solid rgb(233, 225, 225);
+}
+.name {
+  border-left: none;
+  border-top: none;
+}
+.name-2 {
+  border-right: none;
+  border-top: none;
+}
+.from-style {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.eye-btn {
+  border-bottom: 1px solid rgb(233, 225, 225);
+}
+.last-input {
+  border-bottom: none;
+}
 @media screen and (min-width: 576px) {
   .modal-dialog {
     max-width: 736px;
