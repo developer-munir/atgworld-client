@@ -66,7 +66,7 @@ const PostCard = () => {
               alt=""
               className="profile rounded-pill"
             />
-            <div className="ms-2 mt-md-3">
+            <div className="ms-2 mt-md-2">
               <span className=" fw-bold">Munir Hossain Juwel</span>
               <span className="d-flex align-items-center d-md-none">
                 <span>

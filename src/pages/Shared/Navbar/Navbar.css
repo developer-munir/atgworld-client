@@ -22,13 +22,10 @@
 .account-text-color-black {
   color: #2e2e2e;
 }
-
-@media screen and (max-width: 991px) {
-  .form-style {
-    width: 200px;
-  }
+.profileName {
+  font-size: 14px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .navbar-sizing {
     padding-left: 20px;
     padding-right: 20px;

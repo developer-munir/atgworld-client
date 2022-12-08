@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import navbarBrandIcon from "../../../assets/Union 1.png";
 import { AiOutlineSearch, AiFillHome, AiOutlineLogin } from "react-icons/ai";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../context/AuthContext/AuthProvider";
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div>
       <nav className="navbar navbar-expand navbar-light">
@@ -30,7 +32,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <nav className="navbar  fixed-top navbar-expand-md d-none d-md-block navbar-light bg-white">
+      <nav className="navbar  fixed-top navbar-expand-md d-none d-md-block navbar-light bg-white border-bottom">
         <div className="container-fluid navbar-sizing">
           <p className="navbar-brand fs-3 brand-container  d-none d-md-block">
             <span className="brand">ATG</span>
@@ -56,20 +58,36 @@ const Navbar = () => {
                 />
               </div>
             </ul>
-
-            <span className="navbar-end">
-              <span className="account-text-color-black">Create account. </span>
-              <span className="dropdown">
-                <span
-                  className=" dropdown-toggle account-text-color-blue"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
-                  It's free!
+            {user?.uid ? (
+              <span className="navbar-end">
+                <span>
+                  <img
+                    src={user?.photoURL}
+                    alt=""
+                    className="profile rounded-pill"
+                  />
+                </span>
+                <span className="account-text-color-black profileName ms-3">
+                  {user?.displayName}
                 </span>
               </span>
-            </span>
+            ) : (
+              <span className="navbar-end">
+                <span className="account-text-color-black">
+                  Create account.{" "}
+                </span>
+                <span className="dropdown">
+                  <span
+                    className=" dropdown-toggle account-text-color-blue"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    It's free!
+                  </span>
+                </span>
+              </span>
+            )}
           </div>
         </div>
       </nav>

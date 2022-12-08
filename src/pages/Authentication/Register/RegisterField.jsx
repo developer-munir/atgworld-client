@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../Authentication.css";
 import { AiOutlineEye } from "react-icons/ai";
 import facebook from "../../../assets/f_logo_RGB-Blue_1024.png";
 import google from "../../../assets/search.png";
+import { AuthContext } from "../../../context/AuthContext/AuthProvider";
+import { GoogleAuthProvider } from "firebase/auth";
 const RegisterField = () => {
+  const { googleLogin } = useContext(AuthContext);
+  // google login
+  const provider = new GoogleAuthProvider();
+  const handleGoogleLogin = () => {
+    googleLogin(provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <div>
       <div className="main-group">
@@ -72,7 +85,10 @@ const RegisterField = () => {
         </div>
         <div className="col-8">Sign up with Facebook</div>
       </div>
-      <div class="row mt-3 border py-2 mx-1 d-flex flex-row justify-content-between">
+      <div
+        class="row mt-3 border py-2 mx-1 d-flex flex-row justify-content-between"
+        onClick={handleGoogleLogin}
+      >
         <div className="col-4 text-end">
           <img src={google} alt="" />
         </div>
