@@ -11,8 +11,12 @@ const ArticleNavbar = () => {
           <div className="collapse navbar-collapse " id="navbarText">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" href="#">
-                  All Posts <span>(25)</span>
+                <Link
+                  className="nav-link active fw-bold"
+                  aria-current="page"
+                  href="#"
+                >
+                  Posts <span>(25)</span>
                 </Link>
               </li>
             </ul>

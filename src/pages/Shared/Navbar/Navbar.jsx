@@ -7,7 +7,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-md navbar-light">
         <div className="container-fluid navbar-sizing">
-          <p className="navbar-brand fs-3 brand-container py-4 d-none d-md-block">
+          <p className="navbar-brand fs-3 brand-container  d-none d-md-block">
             <span className="brand">ATG</span>
             <span>W</span>
             <span>

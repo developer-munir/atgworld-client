@@ -10,14 +10,14 @@ const RegisterField = () => {
         <div class="input-group ">
           <input
             type="text"
-            class="form-control py-3 name"
+            class="form-control py-2 name"
             placeholder="First Name"
             aria-label="Username"
             name="first-name"
           />
           <input
             type="text"
-            class="form-control py-3 name-2"
+            class="form-control py-2 name-2"
             placeholder="Last Name"
             aria-label="Server"
             name="second-name"
@@ -25,7 +25,7 @@ const RegisterField = () => {
         </div>
         <input
           type="email"
-          class="form-control py-3 from-style "
+          class="form-control py-2 from-style "
           placeholder="Email"
           aria-label="Server"
           name="email"
@@ -33,19 +33,19 @@ const RegisterField = () => {
         <div class="input-group">
           <input
             type="password"
-            class="form-control py-3 from-style"
+            class="form-control py-2 from-style"
             placeholder="Recipient's username"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
             name="password"
           />
-          <span class="eye-btn me-2 mt-3" type="button" id="button-addon2">
+          <span class="eye-btn me-2 mt-2" type="button" id="button-addon2">
             <AiOutlineEye size={20}></AiOutlineEye>
           </span>
         </div>
         <input
           type="password"
-          class="form-control py-3 from-style last-input"
+          class="form-control py-2 from-style last-input"
           placeholder="Confirm Password"
           aria-label="Server"
           name="confirm-password"
