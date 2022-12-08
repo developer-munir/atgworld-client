@@ -36,6 +36,12 @@
 .last-input {
   border-bottom: none;
 }
+.create-account-btn {
+  background-color: #2f6ce5;
+  color: white;
+  font-weight: 600;
+  width: 100%;
+}
 @media screen and (min-width: 576px) {
   .modal-dialog {
     max-width: 736px;
