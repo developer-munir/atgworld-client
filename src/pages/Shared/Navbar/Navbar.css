@@ -28,3 +28,9 @@
     width: 200px;
   }
 }
+@media screen and (max-width: 768px) {
+  .navbar-sizing {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
