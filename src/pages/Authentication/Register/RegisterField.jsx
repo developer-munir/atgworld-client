@@ -1,85 +1,138 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "../Authentication.css";
-import { AiOutlineEye } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import facebook from "../../../assets/f_logo_RGB-Blue_1024.png";
 import google from "../../../assets/search.png";
 import { AuthContext } from "../../../context/AuthContext/AuthProvider";
-import { GoogleAuthProvider } from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import toast from "react-hot-toast";
+import { useForm } from "react-hook-form";
 const RegisterField = () => {
-  const { googleLogin } = useContext(AuthContext);
-  // google login
-  const provider = new GoogleAuthProvider();
-  const handleGoogleLogin = () => {
-    googleLogin(provider)
+  const [togglePassword, setTogglePassword] = useState("password");
+  const toggleEyeBtn = () => {
+    togglePassword === "password"
+      ? setTogglePassword("text")
+      : setTogglePassword("password");
+  };
+  //create user with email password
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
+
+  const { googleLogin, facebookLogin } = useContext(AuthContext);
+  // facebook login
+  const facebookProvider = new FacebookAuthProvider();
+  const handleFacebookLogin = () => {
+    facebookLogin(facebookProvider)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        toast.success("login successfully");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.error(error);
+        toast.error(error);
+      });
+  };
+  // google login
+  const googleProvider = new GoogleAuthProvider();
+  const handleGoogleLogin = () => {
+    googleLogin(googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success("login successfully");
+      })
+      .catch((error) => {
+        toast.error(error);
+        console.error(error);
+      });
   };
   return (
     <div>
-      <div className="main-group">
+      <form className="main-group" onSubmit={handleSubmit(onSubmit)}>
         <div className="input-group ">
           <input
+            {...register("first-name")}
             type="text"
             className="form-control py-2 name"
             placeholder="First Name"
             aria-label="Username"
             name="first-name"
+            required
           />
           <input
+            {...register("last-name")}
             type="text"
             className="form-control py-2 name-2"
             placeholder="Last Name"
             aria-label="Server"
-            name="second-name"
+            name="last-name"
+            required
           />
         </div>
         <input
+          {...register("email")}
           type="email"
           className="form-control py-2 from-style "
           placeholder="Email"
           aria-label="Server"
           name="email"
+          required
         />
         <div className="input-group">
           <input
-            type="password"
+            {...register("password")}
+            type={togglePassword}
             className="form-control py-2 from-style"
-            placeholder="Recipient's username"
+            placeholder="Password"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
             name="password"
+            required
           />
-          <span className="eye-btn me-2 mt-2" type="button" id="button-addon2">
-            <AiOutlineEye size={20}></AiOutlineEye>
+          <span
+            className="eye-btn me-2 mt-2"
+            type="button"
+            id="button-addon2"
+            onClick={toggleEyeBtn}
+          >
+            {togglePassword === "password" ? (
+              <AiOutlineEyeInvisible size={20}></AiOutlineEyeInvisible>
+            ) : (
+              <AiOutlineEye size={20}></AiOutlineEye>
+            )}
           </span>
         </div>
         <input
+          {...register("confirm-password")}
           type="password"
           className="form-control py-2 from-style last-input"
           placeholder="Confirm Password"
           aria-label="Server"
           name="confirm-password"
+          required
         />
-      </div>
-      <div className="row">
-        <div className="col-6 col-md-10 col-lg-12">
-          <button className="my-3 px-4 py-2 rounded-pill border-0 create-account-btn w-100">
-            Create Account
-          </button>
+        <div className="row">
+          <div className="col-6 col-md-10 col-lg-12">
+            <button
+              type="submit"
+              className="my-3 px-4 py-2 rounded-pill border-0 create-account-btn w-100"
+            >
+              Create Account
+            </button>
+          </div>
+          <span
+            className="col-6 col-md-2 d-lg-none mt-4 text-end singnInBtn"
+            data-bs-target="#exampleModalToggle2"
+            data-bs-toggle="modal"
+            data-bs-dismiss="modal"
+          >
+            or, Sign In
+          </span>
         </div>
-        <span
-          className="col-6 col-md-2 d-lg-none mt-4 text-end singnInBtn"
-          data-bs-target="#exampleModalToggle2"
-          data-bs-toggle="modal"
-          data-bs-dismiss="modal"
-        >
-          or, Sign In
-        </span>
-      </div>
-      <div className="row my-3 border py-2 mx-1">
+      </form>
+
+      <div className="row my-3 border py-2 mx-1" onClick={handleFacebookLogin}>
         <div className="col-4 text-end">
           <img src={facebook} alt="" />
         </div>

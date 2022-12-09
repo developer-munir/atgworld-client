@@ -4,8 +4,18 @@ import { AiOutlineSearch, AiFillHome, AiOutlineLogin } from "react-icons/ai";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext/AuthProvider";
+import toast from "react-hot-toast";
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOutUser } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOutUser()
+      .then(() => {
+        toast.success("logout successfully");
+      })
+      .catch((error) => {
+        toast.error(error);
+      });
+  };
   return (
     <div>
       <nav className="navbar navbar-expand navbar-light">
@@ -73,8 +83,7 @@ const Navbar = () => {
                 <div className="dropdown ms-3">
                   {user?.displayName}
                   <span
-                    className="account-text-color-black profileName "
-                    className="dropdown-toggle"
+                    className="account-text-color-black profileName dropdown-toggle "
                     type="button"
                     id="dropdownMenuButton1"
                     data-bs-toggle="dropdown"
@@ -85,7 +94,10 @@ const Navbar = () => {
                     aria-labelledby="dropdownMenuButton1"
                   >
                     <li>
-                      <button className="dropdown-item bg-white ">
+                      <button
+                        className="dropdown-item bg-white "
+                        onClick={handleLogOut}
+                      >
                         Logout
                       </button>
                     </li>
