@@ -16,7 +16,20 @@ const RegisterField = () => {
   };
   //create user with email password
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    /* 
+    confirm
+email
+first
+last
+password 
+    */
+    if (data?.password === data?.confirm) {
+      return toast.error("password did not match!!");
+    }
+
+    console.log(data);
+  };
 
   const { googleLogin, facebookLogin } = useContext(AuthContext);
   // facebook login
@@ -49,69 +62,71 @@ const RegisterField = () => {
   };
   return (
     <div>
-      <form className="main-group" onSubmit={handleSubmit(onSubmit)}>
-        <div className="input-group ">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="main-group">
+          <div className="input-group ">
+            <input
+              {...register("first")}
+              type="text"
+              className="form-control py-2 name"
+              placeholder="First Name"
+              aria-label="Username"
+              name="first"
+              required
+            />
+            <input
+              {...register("last")}
+              type="text"
+              className="form-control py-2 name-2"
+              placeholder="Last Name"
+              aria-label="Server"
+              name="last"
+              required
+            />
+          </div>
           <input
-            {...register("first-name")}
-            type="text"
-            className="form-control py-2 name"
-            placeholder="First Name"
-            aria-label="Username"
-            name="first-name"
-            required
-          />
-          <input
-            {...register("last-name")}
-            type="text"
-            className="form-control py-2 name-2"
-            placeholder="Last Name"
+            {...register("email")}
+            type="email"
+            className="form-control py-2 from-style "
+            placeholder="Email"
             aria-label="Server"
-            name="last-name"
+            name="email"
             required
           />
-        </div>
-        <input
-          {...register("email")}
-          type="email"
-          className="form-control py-2 from-style "
-          placeholder="Email"
-          aria-label="Server"
-          name="email"
-          required
-        />
-        <div className="input-group">
+          <div className="input-group">
+            <input
+              {...register("password")}
+              type={togglePassword}
+              className="form-control py-2 from-style"
+              placeholder="Password"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              name="password"
+              required
+            />
+            <span
+              className="eye-btn me-2 mt-2"
+              type="button"
+              id="button-addon2"
+              onClick={toggleEyeBtn}
+            >
+              {togglePassword === "password" ? (
+                <AiOutlineEyeInvisible size={20}></AiOutlineEyeInvisible>
+              ) : (
+                <AiOutlineEye size={20}></AiOutlineEye>
+              )}
+            </span>
+          </div>
           <input
-            {...register("password")}
-            type={togglePassword}
-            className="form-control py-2 from-style"
-            placeholder="Password"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-            name="password"
+            {...register("confirm")}
+            type="password"
+            className="form-control py-2 from-style last-input"
+            placeholder="Confirm Password"
+            aria-label="Server"
+            name="confirm"
             required
           />
-          <span
-            className="eye-btn me-2 mt-2"
-            type="button"
-            id="button-addon2"
-            onClick={toggleEyeBtn}
-          >
-            {togglePassword === "password" ? (
-              <AiOutlineEyeInvisible size={20}></AiOutlineEyeInvisible>
-            ) : (
-              <AiOutlineEye size={20}></AiOutlineEye>
-            )}
-          </span>
         </div>
-        <input
-          {...register("confirm-password")}
-          type="password"
-          className="form-control py-2 from-style last-input"
-          placeholder="Confirm Password"
-          aria-label="Server"
-          name="confirm-password"
-          required
-        />
         <div className="row">
           <div className="col-6 col-md-10 col-lg-12">
             <button
